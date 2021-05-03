@@ -2,6 +2,8 @@
 
 An interactive website where you can visualize the search process for a computer solving the Water Jug Problem.
 
+The site can be found here: <a href="https://water-jug-search.glitch.me/">https://water-jug-search.glitch.me/</a>
+
 Created by: 
   - Eddie Krystowski (<a href="https://github.com/eddiekrystowski">https://github.com/eddiekrystowski</a>)
   - Joe Krystowski (<a href="https://github.com/joekrystowski">https://github.com/joekrystowski</a>)
