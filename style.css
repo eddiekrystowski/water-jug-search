@@ -1,0 +1,172 @@
+
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #d4d2d2;
+  --color-text-main: #000000;
+  --color-primary: #FFFF00;
+  --wrapper-height: 87vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+}
+
+
+
+html, body {
+  padding: 5px;
+  margin: 0px;
+  width:100%;
+  height:100%;
+}
+
+body {
+  font-family: HK Grotesk;
+  background-color: var(--color-bg);
+}
+
+
+.menu-button {
+  -webkit-filter: brightness(100%);
+  font-size:3vw;
+  padding:1%;
+  border: 2px solid #808080;
+  margin:10px;
+}
+
+.menu-button:hover {
+  -webkit-filter: brightness(70%);
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all 1s ease;
+  cursor:pointer;
+}
+
+.menu-button:focus {
+  outline:none;
+}
+
+.reg-text {
+  color: RGB(71,71,71);
+  font-size: 1.5vw;
+}
+
+.small-text {
+  font-size: 1.5vw;
+}
+
+.integer-input {
+    width: 60%;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly ;
+}
+
+#main {
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content:space-evenly;
+  width:100%;
+  height:100%;
+  background: #d4d2d2;
+}
+
+#treeContainer {
+  position:absolute;
+  top:0px;
+  left:0px;
+  width:100%;
+  height:100%;
+  border: 2px solid RGB(130,130,130);
+  font-size:2vw;
+  background: RGB(230,230,230);
+}
+
+#treeWrapper {
+  position:relative;
+  width:100%;
+  height:100%;
+  padding-bottom:10px;
+  padding-top:10px;
+}
+
+#menu {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width:30%;
+  height:100%;
+  padding: 5px;
+}
+
+#search {
+  border-radius: 2%;
+  padding-left: 100px;
+  padding-right: 100px;
+  margin: 10px;
+}
+
+#bottom-buttons-div {
+  display:flex;
+  flex-direction: column;
+  align items:center;
+}
+
+#search-form {
+  height: fill;
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 15px;
+  justify-content: space-evenly;
+}
+
+
+.node {
+  padding: 2px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: 2px solid #000;
+  width: 100px;
+  font-family: Tahoma;
+  font-size: 18px;
+  display:flex !important;
+  justify-content:center;
+}
+
+.leaf-node {
+  background-color: rgb(245, 144, 144);
+  border: 2px solid red;
+}
+
+.solution-node {
+  background-color: RGB(144, 245, 166) !important;
+  border: 2px solid darkgreen !important;
+}
+
+.goal-node {
+  background-color: #F4E04A;
+  border: 2px solid #C4B336 !important;
+}
+.collapse-switch{
+  width:10px !important;
+  height:10px !important;
+  top: 85% !important;
+  left: 45% !important;
+  background-color: RGB(130,130,130);
+}
+
+td, th {
+  background-color: RGB(180,180,180);
+  text-align:center;
+}
+
+
