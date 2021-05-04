@@ -4,6 +4,8 @@ An interactive website where you can visualize the search process for a computer
 
 The site can be found here: <a href="https://water-jug-search.glitch.me/">https://water-jug-search.glitch.me/</a>
 
+GitHub Repository: <a href="https://github.com/eddiekrystowski/water-jug-search/">https://github.com/eddiekrystowski/water-jug-search</a>
+
 Created by: 
   - Eddie Krystowski (<a href="https://github.com/eddiekrystowski">https://github.com/eddiekrystowski</a>)
   - Joe Krystowski (<a href="https://github.com/joekrystowski">https://github.com/joekrystowski</a>)
