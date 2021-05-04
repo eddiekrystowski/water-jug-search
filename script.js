@@ -3,7 +3,7 @@
 
 
 
-let SEARCH_TYPE = "DFS";
+let SEARCH_TYPE = "BFS";
 let TREE = undefined;
 
 //takes in operation as HTML class name and returns a neater version
