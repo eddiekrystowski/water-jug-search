@@ -1,8 +1,6 @@
 /* global p5 Jug Search Treant NODES_CHECKED $ millis*/
 
 
-
-
 let SEARCH_TYPE = "BFS";
 let TREE = undefined;
 
@@ -255,10 +253,34 @@ $(document).ready(function() {
     } 
   });
   
+  document.getElementById("resetButton").addEventListener("click", function(){
+    $("#operationsWrapper").empty();
+    $("#operationsWrapper").html(`
+      <div id="numsDiv">
+        <p>1.</p>
+        <p>2.</p>
+        <p>3.</p>
+        <p>4.</p>
+        <p>5.</p>
+        <p>6.</p>
+      </div>
+      <div id="rankDiv" class="holder">
+        <p class="rank" data-action="fill a">Fill Jug A</p>
+        <p class="rank" data-action="fill b">Fill Jug B</p>
+        <p class="rank" data-action="empty a">Empty Jug A</p>
+        <p class="rank" data-action="empty b">Empty Jug B</p>
+        <p class="rank" data-action="transfer a b">Transfer Jug A to Jug B</p>
+        <p class="rank" data-action="transfer b a">Transfer Jug B to Jug A</p>
+      </div>`
+    );
+    $('.holder').sortable();
+  });
+  
   //create the default tree
   createTree(initializeSearch(), false);
   
-  //let myp5 = new p5(sketch);
+  $('.holder').sortable();
+  
 });
 
 
