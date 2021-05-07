@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="/style.css" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>  
     
     <!-- Tree Drawing Library (Treant.js) -->
     <script src="/Treant/wheel-raphael.js"></script>
@@ -31,6 +31,7 @@
   </head>
   
   <body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>  
     <div id="main" class="reg-text">
       <!-- Tree Divs -->
       <div id="treeWrapper">
@@ -67,71 +68,24 @@
             <p style="text-decoration:underline; margin-bottom:5px;">
               <strong>Operation Order:</strong>
             </p>
-            <div>
-              <select id="fillARank" name="fillARank" class="rank">
-                <option value="1" selected>1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-              <label for="fillARank">Fill Jug A</label>
-            </div>
-            <div>
-              <select id="fillBRank" name="fillBRank" class="rank">
-                <option value="1">1</option>
-                <option value="2" selected>2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-              <label for="fillBRank">Fill Jug B</label>
-            </div>
-            <div>
-              <select id="emptyARank" name="emptyARank" class="rank">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3" selected>3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-              <label for="emptyARank">Empty Jug A</label>
-            </div>
-            <div>
-              <select id="emptyBRank" name="emptyBRank" class="rank">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4" selected>4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-              <label for="emptyBRank">Empty Jug B</label>
-            </div>
-            <div>
-              <select id="transferAtoBRank" name="transferAtoBRank" class="rank">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5" selected>5</option>
-                <option value="6">6</option>
-              </select>
-              <label for="transferAtoBRank">Transfer Jug A to Jug B</label>
-            </div>
-            <div>
-              <select id="transferBtoARank" name="transferBtoARank" class="rank">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6" selected>6</option>
-              </select>
-              <label for="transferBtoARank">Transfer Jug B to Jug A</label>
+            
+            <div id="operationsWrapper">
+              <div id="numsDiv">
+                <p>1.</p>
+                <p>2.</p>
+                <p>3.</p>
+                <p>4.</p>
+                <p>5.</p>
+                <p>6.</p>
+              </div>
+              <div id="rankDiv" class="holder">
+                <p class="rank" data-action="fill a">Fill Jug A</p>
+                <p class="rank" data-action="fill b">Fill Jug B</p>
+                <p class="rank" data-action="empty a">Empty Jug A</p>
+                <p class="rank" data-action="empty b">Empty Jug B</p>
+                <p class="rank" data-action="transfer a b">Transfer Jug A to Jug B</p>
+                <p class="rank" data-action="transfer b a">Transfer Jug B to Jug A</p>
+              </div>
             </div>
           </div>
           <!-- END OF OPERATION RANKINGS -->
@@ -150,7 +104,7 @@
           <br>
           <!-- END OF SEARCH TYPE RADIO SELECTION -->
           
-          <input type="reset" style="margin-left:45%;">
+          <input id="resetButton" type="reset" style="margin-left:45%;">
         </form>
         <!-- END OF INPUT FORM -->
         

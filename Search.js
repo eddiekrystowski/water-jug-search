@@ -44,23 +44,21 @@ class Search {
       bind(this.transfer, this, 'b', 'a')
     ];
     
+
     //shuffle action order based on inputs in form
     this.adjustActionPreferenceOrder();
-    
   }
   
   //shuffle action order based on inputs in form
   adjustActionPreferenceOrder() {
     let new_actions = [];
     let values = $('.rank');
-    for(let i = 0; i < values.length; i++){
-      let new_rank = parseInt(values.get(i).value) -1;
-      if(new_actions[new_rank]){
-        this.actions_ = []; 
-        return;
-      }
-      new_actions[new_rank] = this.actions_[i];
-    }
+    
+    let self = this;
+    values.each(function(index) {
+      let new_action = $(this).attr("data-action").split(" ");
+      new_actions.push(bind(self[new_action[0]], self, ...new_action.slice(1)));
+    });
     this.actions_ = new_actions;
   }
   
